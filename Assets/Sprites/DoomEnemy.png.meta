@@ -1,0 +1,1318 @@
+fileFormatVersion: 2
+guid: a36d8b83ccf529a43a9c50f192bd2573
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1189127222382877360
+    second: DoomEnemy_Walk1_Forward1
+  - first:
+      213: -7517394161754912703
+    second: DoomEnemy_Walk1_Forward2
+  - first:
+      213: 2663176532353039031
+    second: DoomEnemy_Walk1_Forward3
+  - first:
+      213: 3376689665230903523
+    second: DoomEnemy_Walk1_Forward4
+  - first:
+      213: 5140316209839830397
+    second: DoomEnemy_Walk2_ForwardSide1
+  - first:
+      213: -4051802102404258930
+    second: DoomEnemy_Walk2_ForwardSide2
+  - first:
+      213: 2311814796730288233
+    second: DoomEnemy_Walk1_ForwardSide3
+  - first:
+      213: -3145011176767660554
+    second: DoomEnemy_Walk2_ForwardSide4
+  - first:
+      213: -8279816610742536971
+    second: DoomEnemy_Walk3_Side1
+  - first:
+      213: 8346204178557919051
+    second: DoomEnemy_Walk3_Side2
+  - first:
+      213: -4124594697158854999
+    second: DoomEnemy_Walk3_Side3
+  - first:
+      213: 8729377310081855147
+    second: DoomEnemy_Walk3_Side4
+  - first:
+      213: -1009218454539827032
+    second: DoomEnemy_Walk4_BackSide1
+  - first:
+      213: -3244772435422730595
+    second: DoomEnemy_Walk4_BackSide2
+  - first:
+      213: -4070379586658041559
+    second: DoomEnemy_Walk4_BackSide3
+  - first:
+      213: 694215901984259845
+    second: DoomEnemy_Walk4_BackSide4
+  - first:
+      213: 4840202887694348257
+    second: DoomEnemy_Walk5_Back1
+  - first:
+      213: 4799430524288346146
+    second: DoomEnemy_Walk5_Back2
+  - first:
+      213: 7860317231453685785
+    second: DoomEnemy_Walk5_Back3
+  - first:
+      213: -7653795444504938274
+    second: DoomEnemy_Walk5_Back4
+  - first:
+      213: 8396600928522609607
+    second: DoomEnemy_Idle_Forward
+  - first:
+      213: -6543008985697814579
+    second: DoomEnemy_Idle_ForwardSide
+  - first:
+      213: 1156339240080310022
+    second: DoomEnemy_Idle_Side
+  - first:
+      213: -4226974598081867519
+    second: DoomEnemy_Idle_BackSide
+  - first:
+      213: -5721182085443608282
+    second: DoomEnemy_Idle_Back
+  - first:
+      213: -2036076725546539734
+    second: DoomEnemy_Shoot_Forward
+  - first:
+      213: 8866769128234379911
+    second: DoomEnemy_Shoot_ForwardSide
+  - first:
+      213: -4942447090215507647
+    second: DoomEnemy_Shoot_Side
+  - first:
+      213: -828367870063119011
+    second: DoomEnemy_Shoot_BackSide
+  - first:
+      213: -5622510336708035943
+    second: DoomEnemy_Shoot_Back
+  - first:
+      213: -2901059461837824520
+    second: DoomEnemy_Hit_Forward
+  - first:
+      213: -4175260857231183703
+    second: DoomEnemy_Hit_ForwardSide
+  - first:
+      213: 1932183264430535672
+    second: DoomEnemy_Hit_Side
+  - first:
+      213: -44419250195268419
+    second: DoomEnemy_Hit_BackSide
+  - first:
+      213: 3733792721489553656
+    second: DoomEnemy_Hit_Back
+  - first:
+      213: 7074639953669676207
+    second: DoomEnemy_Death1
+  - first:
+      213: 5286887263279849176
+    second: DoomEnemy_Death2
+  - first:
+      213: 5271694947760449153
+    second: DoomEnemy_Death3
+  - first:
+      213: -2762693560816883226
+    second: DoomEnemy_Death4
+  - first:
+      213: 8841322702630120751
+    second: DoomEnemy_Death5
+  - first:
+      213: -6495411530620398167
+    second: DoomEnemy_Exploded1
+  - first:
+      213: 7127109487678844572
+    second: DoomEnemy_Exploded2
+  - first:
+      213: 464839558684988004
+    second: DoomEnemy_Exploded3
+  - first:
+      213: 7426279426062747934
+    second: DoomEnemy_Exploded4
+  - first:
+      213: -1306137263708764928
+    second: DoomEnemy_Exploded5
+  - first:
+      213: 5699022537257492817
+    second: DoomEnemy_Exploded6
+  - first:
+      213: 1056547564547552247
+    second: DoomEnemy_Exploded7
+  - first:
+      213: 5655129419362037578
+    second: DoomEnemy_Exploded8
+  - first:
+      213: -4739977530623019805
+    second: DoomEnemy_Exploded9
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DoomEnemy_Walk1_Forward1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 796
+        width: 41
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0552f1d671f5f7fe0800000000000000
+      internalID: -1189127222382877360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk1_Forward2
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 699
+        width: 37
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148c008b6d9dca790800000000000000
+      internalID: -7517394161754912703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk1_Forward3
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 602
+        width: 38
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba3f0132f085f420800000000000000
+      internalID: 2663176532353039031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk1_Forward4
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 505
+        width: 40
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e812dc2c596cde20800000000000000
+      internalID: 3376689665230903523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk2_ForwardSide1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 797
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d757fa8bb52165740800000000000000
+      internalID: 5140316209839830397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk2_ForwardSide2
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 700
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e83630a847b15c7c0800000000000000
+      internalID: -4051802102404258930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk1_ForwardSide3
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 603
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968c9912f47351020800000000000000
+      internalID: 2311814796730288233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk2_ForwardSide4
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 506
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd512a6ffcaa54d0800000000000000
+      internalID: -3145011176767660554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk3_Side1
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 798
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4ff4f29ae281d80800000000000000
+      internalID: -8279816610742536971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk3_Side2
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 699
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f53d5fa7ca3d370800000000000000
+      internalID: 8346204178557919051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk3_Side3
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 602
+        width: 37
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6f269d9fe72c6c0800000000000000
+      internalID: -4124594697158854999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk3_Side4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 506
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baea8cdc96af42970800000000000000
+      internalID: 8729377310081855147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk4_BackSide1
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 801
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a88264a9298ef1f0800000000000000
+      internalID: -1009218454539827032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk4_BackSide2
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 700
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9626a959a048f2d0800000000000000
+      internalID: -3244772435422730595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk4_BackSide3
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 602
+        width: 41
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9210f3ce45b1387c0800000000000000
+      internalID: -4070379586658041559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk4_BackSide4
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 506
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ff23b4fa952a900800000000000000
+      internalID: 694215901984259845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk5_Back1
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 800
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef67d1c1eadb2340800000000000000
+      internalID: 4840202887694348257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk5_Back2
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 700
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228af5422a00b9240800000000000000
+      internalID: 4799430524288346146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk5_Back3
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 602
+        width: 34
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918cda250e4751d60800000000000000
+      internalID: 7860317231453685785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Walk5_Back4
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 506
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8b7c2489148c590800000000000000
+      internalID: -7653795444504938274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Idle_Forward
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 408
+        width: 26
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c32e41be08b68470800000000000000
+      internalID: 8396600928522609607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Idle_ForwardSide
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 409
+        width: 43
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc7fa4d6eff8235a0800000000000000
+      internalID: -6543008985697814579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Idle_Side
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 410
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ff4dc89642c0010800000000000000
+      internalID: 1156339240080310022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Idle_BackSide
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 411
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1011bbe9ff4c655c0800000000000000
+      internalID: -4226974598081867519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Idle_Back
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 412
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6212ec594374a90b0800000000000000
+      internalID: -5721182085443608282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Shoot_Forward
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 319
+        width: 27
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25ab5671076eb3e0800000000000000
+      internalID: -2036076725546539734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Shoot_ForwardSide
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 320
+        width: 45
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a6fc14b871d0b70800000000000000
+      internalID: 8866769128234379911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Shoot_Side
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 321
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149aa82ce86e86bb0800000000000000
+      internalID: -4942447090215507647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Shoot_BackSide
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 322
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d557a81afcb0184f0800000000000000
+      internalID: -828367870063119011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Shoot_Back
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 323
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a3e8a53a4d8f1b0800000000000000
+      internalID: -5622510336708035943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Hit_Forward
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 230
+        width: 39
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fdded83acd5db7d0800000000000000
+      internalID: -2901059461837824520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Hit_ForwardSide
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 230
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a074203f5e7e06c0800000000000000
+      internalID: -4175260857231183703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Hit_Side
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 231
+        width: 43
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3365d117e70da10800000000000000
+      internalID: 1932183264430535672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Hit_BackSide
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 232
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbcfbe26de0326ff0800000000000000
+      internalID: -44419250195268419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Hit_Back
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 232
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8e25d92b811d330800000000000000
+      internalID: 3733792721489553656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Death1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 141
+        width: 39
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac54480e8b2e2260800000000000000
+      internalID: 7074639953669676207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Death2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 150
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de155f64fbce5940800000000000000
+      internalID: 5286887263279849176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Death3
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 162
+        width: 43
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 186ab75df92d82940800000000000000
+      internalID: 5271694947760449153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Death4
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 169
+        width: 48
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9204408d0f8a9d0800000000000000
+      internalID: -2762693560816883226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Death5
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 179
+        width: 47
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d6dda9720b2ba70800000000000000
+      internalID: 8841322702630120751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Exploded1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 49
+        width: 41
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5156780a9abd5a0800000000000000
+      internalID: -6495411530620398167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Exploded2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 46
+        width: 43
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ee968615498e260800000000000000
+      internalID: 7127109487678844572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Exploded3
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 47
+        width: 48
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462d7f4ad11737600800000000000000
+      internalID: 464839558684988004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Exploded4
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 53
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e190349bac17f0760800000000000000
+      internalID: 7426279426062747934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Exploded5
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 57
+        width: 55
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0050db0341bafdde0800000000000000
+      internalID: -1306137263708764928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Exploded6
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 65
+        width: 57
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151ad2c8dcef61f40800000000000000
+      internalID: 5699022537257492817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Exploded7
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 72
+        width: 57
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f33921896c99ae00800000000000000
+      internalID: 1056547564547552247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Exploded8
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 10
+        width: 57
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4f6fe7ae3e0b7e40800000000000000
+      internalID: 5655129419362037578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomEnemy_Exploded9
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 15
+        width: 57
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4b1e3ac87383eb0800000000000000
+      internalID: -4739977530623019805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7cfd27a31a774a840bdd79a22b308e97
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
