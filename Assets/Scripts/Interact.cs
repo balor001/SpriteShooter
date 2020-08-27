@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Interact : MonoBehaviour
 {
     public PlayerInputController playerInputController;
+    public Text interactTip;
 
     private GameObject raycastedObject;
 
@@ -18,11 +20,15 @@ public class Interact : MonoBehaviour
         RaycastHit hit;
         Vector3 forward = transform.TransformDirection(Vector3.forward);
 
+        interactTip.enabled = false;
+
         if (Physics.Raycast(transform.position, forward, out hit, rayLength, layerMaskInteract.value))
         {
             // Check if the hit object is interactable
             if (hit.collider.CompareTag("Interactable"))
             {
+                interactTip.enabled = true;
+
                 raycastedObject = hit.collider.gameObject;
 
                 if (playerInputController.inputActions.Player.Interact.triggered)

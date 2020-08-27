@@ -44,6 +44,11 @@ public class Gun : MonoBehaviour
                 target.TakeDamage(damage);
             }
 
+            if (hit.transform.CompareTag("Destructable"))
+            {
+                hit.transform.GetComponent<HitHandler>().TakeDamage(damage);
+            }
+
             if (hit.rigidbody != null)
             {
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
