@@ -39,9 +39,10 @@ public class Interact : MonoBehaviour
                     }
 
                     // Crate contains a keycard
-                    if (raycastedObject.name == "Crate")
+                    if (raycastedObject.name == "KeyCard")
                     {
                         keyCard = true;
+                        raycastedObject.SetActive(false);
                         Debug.Log("You found a key card!");
                     }
 
