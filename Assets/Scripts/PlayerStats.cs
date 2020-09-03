@@ -12,10 +12,12 @@ public class PlayerStats : MonoBehaviour
     public static float stamina = 100f;
     public float maxStamina = 100f;
 
+    /*
     private static float staminaRegenTimer = 0f;
     private const float staminaDecreaseRate = 15f;
     private const float staminaIncreaseRate = 5f;
     private const float staminaTimeToRegen = 3f;
+    */
 
     public Slider healthSlider;
     public Slider staminaSlider;
@@ -38,6 +40,7 @@ public class PlayerStats : MonoBehaviour
         healthSlider.value = CalculateHealth();
         staminaSlider.value = CalculateStamina();
 
+        /* 
         // Reduce stamina when player sprints
         if (PlayerMovement.isSprinting)
         {
@@ -56,6 +59,7 @@ public class PlayerStats : MonoBehaviour
                 staminaRegenTimer += Time.deltaTime;
             }
         }
+        */
 
         // Testing player health
         if (playerInputController.inputActions.Player.DamagePlayer.triggered)
@@ -74,11 +78,13 @@ public class PlayerStats : MonoBehaviour
         return stamina / maxStamina;
     }
 
+    /*
     public static void JumpStaminaReduction()
     {
         stamina -= 5;
         staminaRegenTimer = 0f;
     }
+    */
 
     public static void AddHealth(float amount)
     {

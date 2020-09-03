@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float walkSpeed = 7.5f;
     public float runSpeed = 12.5f;
-    public float jumpHeigth = 10f;
+    public float jumpHeigth = 12f;
     public float crouchHeigth = 2f;
     public float gravity = -9.81f;
 
@@ -74,6 +74,14 @@ public class PlayerMovement : MonoBehaviour
         playerInputController.inputActions.Player.Crouch.performed += crouch => isCrouching = true;
         playerInputController.inputActions.Player.Crouch.canceled += crouch => isCrouching = false;
 
+        Vector3 up = transform.TransformDirection(Vector3.up);
+
+        // Force crouch if there's no room to stand up
+        if (Physics.Raycast(mainCamera.position, up, 0.1f))
+        {
+            newHeight = 0.5f * originalHeight;
+        }
+
         lastHeight = controller.height;
         controller.height = Mathf.Lerp(controller.height, newHeight, 10.0f * Time.deltaTime);    // Change character height
         transform.position = transform.position + new Vector3(0, (controller.height - lastHeight) * 1f, 0);   // Update vertical position
@@ -82,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         if (playerInputController.inputActions.Player.Jump.triggered && isGrounded && PlayerStats.stamina >= 5)
         {
             velocity.y = Mathf.Sqrt(jumpHeigth * -2f * gravity);
-            PlayerStats.JumpStaminaReduction();
+            //PlayerStats.JumpStaminaReduction();
         }
 
         velocity.y += gravity * Time.deltaTime;
@@ -90,24 +98,4 @@ public class PlayerMovement : MonoBehaviour
 
         //Debug.Log("Speed: " + movementSpeed);
     }
-
-    /*
-    public void PlayerCrouch()
-    {
-        if (crouch)
-        {
-            controller.height = crouchHeigth;
-        }
-        else
-        {
-            controller.height = originalHeight;
-        }
-
-    }
-
-    public void PlayerJump()
-    {
-        velocity.y = Mathf.Sqrt(jumpHeigth * -2f * gravity);
-    }
-    */
 }
