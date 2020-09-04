@@ -47,22 +47,57 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditorInternal;
 using System.Linq;
+using UnityEditor.UIElements;
 
 [CustomEditor(typeof(SpriteAnimationSheet))]
 public class ListEditor : Editor
 {
     ReorderableList list;
+    ReorderableList spriteList;
     SpriteAnimationSheet spriteAnimationSheet;
+
+    SerializedProperty sheetNameProperty;
+    SerializedProperty animTypeProperty;
+    SerializedProperty animModeProperty;
+    SerializedProperty framesPerSecondProperty;
+    SerializedProperty frameArrayProperty;
+    SerializedProperty spriteArrayProperty;
+
+    Object test;
+
+
+    Sprites GetSprites;
+    Sprite[] spriteArray;
+    FrameArray GetFrameArrays;
+
+    int indexSize = 0;
 
     private void OnEnable()
     {
         list = new ReorderableList(serializedObject, serializedObject.FindProperty("frames"), true, true, true, true);
+
+        Debug.Log("list.index " + list.index);
+        sheetNameProperty = serializedObject.FindProperty("sheetName");
+        animTypeProperty = serializedObject.FindProperty("animType");
+        animModeProperty = serializedObject.FindProperty("animMode");
+        framesPerSecondProperty = serializedObject.FindProperty("framesPerSecond");
+        frameArrayProperty = serializedObject.FindProperty("frames");
+        spriteArrayProperty = serializedObject.FindProperty("sprites");
+
+       // test = serializedObject.FindProperty("sprites");
+
+        // Get Frame and Sprite Arrays
+        GetFrameArrays = new FrameArray();
+        GetSprites = new Sprites();
+        spriteArray = GetSprites.sprites;
+        GetSprites.sprites = new Sprite[indexSize];
 
         if (target == null)
         {
             return;
         }
         spriteAnimationSheet = (SpriteAnimationSheet)target;
+
 
         // Draw the reordablelist
         list.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) =>
@@ -71,7 +106,12 @@ public class ListEditor : Editor
             rect.y += 2;
             EditorGUI.LabelField(rect, "Sprite #" + (index + 1f));
             rect.x += 65;
-            EditorGUI.LabelField(rect, "Len: " + (0));
+            EditorGUI.LabelField(rect, "Len: " + (1));
+
+
+            
+            //Debug.Log("SpriteArray: " + spriteArray + index);
+
         };
 
         // Header of the list
@@ -81,12 +121,11 @@ public class ListEditor : Editor
         };
 
         // When frame is selected
-        list.onSelectCallback = list =>
+        list.onSelectCallback = (ReorderableList l) =>
         {
-
+            
         };
     }
-
 
     public override void OnInspectorGUI()
     {
@@ -95,24 +134,28 @@ public class ListEditor : Editor
         //base.OnInspectorGUI();
         spriteAnimationSheet = (SpriteAnimationSheet)target;
 
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("sheetName"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("animType"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("animMode"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("framesPerSecond"));
+        EditorGUILayout.PropertyField(sheetNameProperty, new GUIContent("Name Field"));
+        EditorGUILayout.PropertyField(animTypeProperty, new GUIContent("Animation Type"));
+        EditorGUILayout.PropertyField(animModeProperty, new GUIContent("Animation Mode"));
+        EditorGUILayout.PropertyField(framesPerSecondProperty, new GUIContent("FPS"));
         list.DoLayoutList();
 
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("sprite"));
+
+        //Debug.Log(frameArray[1].sprite);
 
         switch (spriteAnimationSheet.animType)
         {
             case SpriteAnimationSheet.AnimType.Eight_Directions:
-
+                indexSize = 8;
+                Debug.Log("Index Size: " + indexSize);
                 break;
             case SpriteAnimationSheet.AnimType.Four_Directions:
-                
+                indexSize = 4;
+                Debug.Log("Index Size: " + indexSize);
                 break;
             case SpriteAnimationSheet.AnimType.One_Direction:
-                
+                indexSize = 1;
+                Debug.Log("Index Size: " + indexSize);
                 break;
             default:
                 break;
@@ -133,10 +176,7 @@ public class ListEditor : Editor
         }
 
 
-
+        EditorGUILayout.PropertyField(spriteArrayProperty, new GUIContent("Sprites"));
         serializedObject.ApplyModifiedProperties();
-
     }
-
-
 }

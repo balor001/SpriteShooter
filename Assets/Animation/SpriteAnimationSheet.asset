@@ -13,8 +13,17 @@ MonoBehaviour:
   m_Name: SpriteAnimationSheet
   m_EditorClassIdentifier: Assembly-CSharp::SpriteAnimationSheet
   sheetName: 
-  animType: 0
+  animType: 1
   animMode: 0
-  framesPerSecond: 1
+  framesPerSecond: 4
   frames: []
-  sprite: {fileID: 0}
+  sprites:
+    sprites:
+    - {fileID: 7074639953669676207, guid: a36d8b83ccf529a43a9c50f192bd2573, type: 3}
+    - {fileID: 5286887263279849176, guid: a36d8b83ccf529a43a9c50f192bd2573, type: 3}
+    - {fileID: 5286887263279849176, guid: a36d8b83ccf529a43a9c50f192bd2573, type: 3}
+    - {fileID: 5286887263279849176, guid: a36d8b83ccf529a43a9c50f192bd2573, type: 3}
+    - {fileID: 5286887263279849176, guid: a36d8b83ccf529a43a9c50f192bd2573, type: 3}
+    - {fileID: 5286887263279849176, guid: a36d8b83ccf529a43a9c50f192bd2573, type: 3}
+    - {fileID: 5286887263279849176, guid: a36d8b83ccf529a43a9c50f192bd2573, type: 3}
+    - {fileID: 5286887263279849176, guid: a36d8b83ccf529a43a9c50f192bd2573, type: 3}
