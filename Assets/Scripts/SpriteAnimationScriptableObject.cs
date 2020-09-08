@@ -2,6 +2,7 @@
 using Boo.Lang;
 using System;
 using UnityEngine.UI;
+using System.Runtime.Remoting.Messaging;
 
 [CreateAssetMenu(fileName = "SpriteAnimationSheet", menuName = "Sprite Animation")]
 public class SpriteAnimationSheet : ScriptableObject
@@ -31,13 +32,18 @@ public class SpriteAnimationSheet : ScriptableObject
 
 // Iniatilize List Array
 [Serializable]
-public class FrameArray
+public class FrameArray : SpriteAnimationSheet
 {
 
+
+    public FrameArray(float FramesPerSecond)
+    {
+        framesPerSecond = FramesPerSecond;
+    }
 }
 
 [Serializable]
-public class Sprites : FrameArray
+public class Sprites : List<FrameArray>
 {
-    public Sprite[] sprites;
+    public Sprite spriteArray;
 }
