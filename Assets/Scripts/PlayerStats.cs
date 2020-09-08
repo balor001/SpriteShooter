@@ -9,63 +9,55 @@ public class PlayerStats : MonoBehaviour
 
     public static float health = 100f;
     public float maxHealth = 100f;
-    public static float stamina = 100f;
-    public float maxStamina = 100f;
+    public static float shield = 100f;
+    public float maxShield = 100f;
 
-    /*
-    private static float staminaRegenTimer = 0f;
-    private const float staminaDecreaseRate = 15f;
-    private const float staminaIncreaseRate = 5f;
-    private const float staminaTimeToRegen = 3f;
-    */
+    public static float overDamage; // Damage that exceeds current shield amount
 
     public Slider healthSlider;
-    public Slider staminaSlider;
+    public Slider shieldSlider;
+    public Text healthAmount;
+    public Text shieldAmount;
 
     void Start()
     {
+        shield = maxShield;
+        shieldSlider.value = CalculateShield();
+        shieldAmount.text = shield.ToString();
+
         health = maxHealth;
-        stamina = maxStamina;
         healthSlider.value = CalculateHealth();
-        staminaSlider.value = CalculateStamina();
+        healthAmount.text = health.ToString();
     }
 
     void Update()
     {
+        if (shield > maxShield)
+        {
+            shield = maxShield;
+        }
+
         if (health > maxHealth)
         {
             health = maxHealth;
         }
 
+        shieldSlider.value = CalculateShield();
         healthSlider.value = CalculateHealth();
-        staminaSlider.value = CalculateStamina();
 
-        /* 
-        // Reduce stamina when player sprints
-        if (PlayerMovement.isSprinting)
-        {
-            stamina = Mathf.Clamp(stamina - (staminaDecreaseRate * Time.deltaTime), 0f, maxStamina);
-            staminaRegenTimer = 0f;
-        }
-        else if (stamina < maxStamina)
-        {
-            // Regen stamina after not using stamina for a while
-            if (staminaRegenTimer >= staminaTimeToRegen)
-            {
-                stamina = Mathf.Clamp(stamina + (staminaIncreaseRate * Time.deltaTime), 0f, maxStamina);
-            }
-            else
-            {
-                staminaRegenTimer += Time.deltaTime;
-            }
-        }
-        */
+        shieldAmount.text = shield.ToString();
+        healthAmount.text = health.ToString();
 
-        // Testing player health
+        // Testing player health (Bind: Q)
         if (playerInputController.inputActions.Player.DamagePlayer.triggered)
         {
-            health -= 10;
+            TakeDamage(15);
         }
+    }
+
+    float CalculateShield()
+    {
+        return shield / maxShield;
     }
 
     float CalculateHealth()
@@ -73,21 +65,28 @@ public class PlayerStats : MonoBehaviour
         return health / maxHealth;
     }
 
-    float CalculateStamina()
-    {
-        return stamina / maxStamina;
-    }
-
-    /*
-    public static void JumpStaminaReduction()
-    {
-        stamina -= 5;
-        staminaRegenTimer = 0f;
-    }
-    */
-
     public static void AddHealth(float amount)
     {
         health += amount;
+    }
+
+    // Damage target order: Shield -> Shield & Health -> Health
+    public void TakeDamage(float amount)
+    {
+        if (shield >= amount)
+        {
+            shield -= amount;
+        }
+        // If player has shields and damage is more than current shields, reduce over going damage from health
+        else if (shield > 0 && shield < amount)
+        {
+            overDamage = amount - shield;
+            shield = 0;
+            health -= overDamage;
+        }
+        else
+        {
+            health -= amount;
+        }
     }
 }

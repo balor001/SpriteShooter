@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Sprinting
-        if (isSprinting && isGrounded && PlayerStats.stamina > 0)
+        if (isSprinting && isGrounded)
         {
             movementSpeed = runSpeed;
         }
@@ -87,10 +87,9 @@ public class PlayerMovement : MonoBehaviour
         transform.position = transform.position + new Vector3(0, (controller.height - lastHeight) * 1f, 0);   // Update vertical position
 
         // Jumping
-        if (playerInputController.inputActions.Player.Jump.triggered && isGrounded && PlayerStats.stamina >= 5)
+        if (playerInputController.inputActions.Player.Jump.triggered && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeigth * -2f * gravity);
-            //PlayerStats.JumpStaminaReduction();
         }
 
         velocity.y += gravity * Time.deltaTime;
