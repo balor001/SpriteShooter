@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     float lastHeight;
 
     bool isCrouching;
-    public static bool isSprinting;
+    bool isSprinting;
 
     void Start()
     {
