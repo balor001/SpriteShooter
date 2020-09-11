@@ -76,6 +76,11 @@ public class PlayerStats : MonoBehaviour
         health += amount;
     }
 
+    public static void AddShield(float amount)
+    {
+        shield += amount;
+    }
+
     // Damage target order: Shield -> Shield & Health -> Health
     public void TakeDamage(float amount)
     {

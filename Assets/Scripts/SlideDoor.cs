@@ -86,15 +86,15 @@ public class SlideDoor : MonoBehaviour
         // Move the door back to its original position
         if (direction == OpenDirection.x)
         {
-            doorBody.localPosition = new Vector3(Mathf.Lerp(defaultPosition.x, doorBody.localPosition.x + openDistance, Time.deltaTime * openSpeed), doorBody.localPosition.y, doorBody.localPosition.z);
+            doorBody.localPosition = new Vector3(Mathf.Lerp(defaultPosition.x, doorBody.localPosition.x, Time.deltaTime * openSpeed), doorBody.localPosition.y, doorBody.localPosition.z);
         }
         else if (direction == OpenDirection.y)
         {
-            doorBody.localPosition = new Vector3(doorBody.localPosition.x, Mathf.Lerp(defaultPosition.y, doorBody.localPosition.y + openDistance, Time.deltaTime * openSpeed), doorBody.localPosition.z);
+            doorBody.localPosition = new Vector3(doorBody.localPosition.x, Mathf.Lerp(defaultPosition.y, doorBody.localPosition.y, Time.deltaTime * openSpeed), doorBody.localPosition.z);
         }
         else if (direction == OpenDirection.z)
         {
-            doorBody.localPosition = new Vector3(doorBody.localPosition.x, doorBody.localPosition.y, Mathf.Lerp(defaultPosition.z, doorBody.localPosition.z + openDistance, Time.deltaTime * openSpeed));
+            doorBody.localPosition = new Vector3(doorBody.localPosition.x, doorBody.localPosition.y, Mathf.Lerp(defaultPosition.z, doorBody.localPosition.z, Time.deltaTime * openSpeed));
         }
 
         timer = 0;

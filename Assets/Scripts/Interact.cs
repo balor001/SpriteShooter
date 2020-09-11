@@ -44,18 +44,24 @@ public class Interact : MonoBehaviour
                         raycastedObject.GetComponent<Elevator>().enabled = true;
                     }
 
-                    // Crate contains a keycard
+                    // Keycard
                     if (raycastedObject.name == "KeyCard")
                     {
                         keyCard = true;
                         raycastedObject.SetActive(false);
-                        Debug.Log("You found a key card!");
+                        Debug.Log("You found a keycard!");
                     }
 
-                    // Health pack heals 25HP
+                    // Health pack
                     if (raycastedObject.name == "HealthPack")
                     {
                         PlayerStats.AddHealth(25);
+                    }
+
+                    // Extra shield
+                    if (raycastedObject.name == "ArmorPack")
+                    {
+                        PlayerStats.AddShield(25);
                     }
                 }
             }
