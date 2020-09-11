@@ -42,6 +42,12 @@ public class PlayerStats : MonoBehaviour
             health = maxHealth;
         }
 
+        if (health <= 0)
+        {
+            // Game over
+            health = 0;
+        }
+
         shieldSlider.value = CalculateShield();
         healthSlider.value = CalculateHealth();
 

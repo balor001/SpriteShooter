@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     public Animator animator;
     public GameObject player;
+    NavMeshAgent agent;
 
-    public float health = 100f;
+    private float health = 100f;
     public float maxHealth = 100f;
 
     public float minAttackDistance = 20f;
@@ -16,11 +18,15 @@ public class Enemy : MonoBehaviour
     public float fireRate = 1f;
     private float nextTimeToFire = 0f;
 
+    bool isAlive;
+
     public GameObject healthBar;
     public Slider healthSlider;
 
     private void Start()
     {
+        isAlive = true;
+        agent = GetComponent<NavMeshAgent>();
         health = maxHealth;
         healthSlider.value = CalculateHealth();
     }
@@ -35,8 +41,21 @@ public class Enemy : MonoBehaviour
         // Get distance to player
         float distance = Vector3.Distance(gameObject.transform.position, player.transform.position);
 
-        // Shoot player when close enough
-        if (distance < minAttackDistance && Time.time >= nextTimeToFire)
+        // Move towards player
+        agent.SetDestination(player.transform.position);
+
+        // Stop moving when within attack range
+        if (distance <= minAttackDistance)
+        {
+            agent.isStopped = true;
+        }
+        else if (distance > minAttackDistance)
+        {
+            agent.isStopped = false;
+        }
+
+        // Shoot player when within range
+        if (distance <= minAttackDistance && Time.time >= nextTimeToFire && isAlive)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             ShootPlayer();
@@ -57,7 +76,8 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0f)
         {
-            Die();
+            //Die();
+            Destroy(gameObject);
         }
     }
 
@@ -82,7 +102,7 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         animator.SetBool("IsDead", true);
-        
+
         Destroy(gameObject, 10f);
     }
 }
