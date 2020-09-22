@@ -15,11 +15,12 @@ GameObject:
   - component: {fileID: 5916100060176227387}
   - component: {fileID: 5916100060176227386}
   - component: {fileID: 5916100060176227365}
+  - component: {fileID: 886889465743596489}
   m_Layer: 10
   m_Name: Crate
   m_TagString: Destructable
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5916100060176227391
@@ -15881,3 +15882,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!208 &886889465743596489
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5916100060176227364}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.55, y: 0.52500004, z: 0.55}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.5, y: 0.52500004, z: -0.5}
+  m_TimeToStationary: 0.5

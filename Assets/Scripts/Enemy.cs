@@ -27,8 +27,9 @@ public class Enemy : MonoBehaviour
 
     [Header("Attack Settings")]
     public AttackType attackType = AttackType.hitscan;
-    public float minAttackDistance = 20f;
-    private float meleeDistance = 5f;
+    public float maxAttackDistance = 40f;   // Max distance for enemy to start attacking player
+    private float minDistance = 20f;        // Min distance between enemy and player
+    private float meleeDistance = 5f;       // Required distance for melee attacks
     public static float damage = 10f;
     public float fireRate = 1f;
     private float nextTimeToFire = 0f;
@@ -58,7 +59,7 @@ public class Enemy : MonoBehaviour
         // Move towards player
         agent.SetDestination(player.position);
 
-        // Stop moving when within attack range (melee range or shooting range)
+        // Pause movement when within melee/minimum distance from player
         if (attackType == AttackType.melee)
         {
             if (distance <= meleeDistance)
@@ -72,18 +73,18 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            if (distance <= minAttackDistance)
+            if (distance <= minDistance)
             {
                 agent.isStopped = true;
             }
-            else if (distance > minAttackDistance)
+            else if (distance > minDistance)
             {
                 agent.isStopped = false;
             }
         }
 
         // Attack player when within range
-        if (distance <= minAttackDistance && Time.time >= nextTimeToFire && isAlive)
+        if (distance <= maxAttackDistance && Time.time >= nextTimeToFire && isAlive)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             AttackPlayer();
@@ -115,34 +116,36 @@ public class Enemy : MonoBehaviour
 
         if (attackType == AttackType.hitscan)
         {
-            if (Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out hit, minAttackDistance))
+            // Check if player is within attack range
+            if (Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out hit, maxAttackDistance))
             {
                 if (hit.transform.CompareTag("Player"))
                 {
-                    // Animation + sound
+                    // Animation + sound here
                     hit.transform.GetComponent<PlayerStats>().TakeDamage(damage);
                 }
             }
         }
         else if (attackType == AttackType.projectile)
         {
-            // Animation + sound
-            if (Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out hit, minAttackDistance))
+            // Check if player is within attack range
+            if (Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out hit, maxAttackDistance))
             {
                 if (hit.transform.CompareTag("Player"))
                 {
-                    // Animation + sound
+                    // Animation + sound here
                     Instantiate(projectile, projectileSpawn.position, projectileSpawn.rotation);
                 }
             }
         }
         else if (attackType == AttackType.melee)
         {
+            // Check if player is within melee range
             if (Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out hit, meleeDistance))
             {
                 if (hit.transform.CompareTag("Player"))
                 {
-                    // Animation + sound
+                    // Animation + sound here
                     hit.transform.GetComponent<PlayerStats>().TakeDamage(damage);
                 }
             }

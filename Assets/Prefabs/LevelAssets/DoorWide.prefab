@@ -14,11 +14,12 @@ GameObject:
   - component: {fileID: 4413716489319486533}
   - component: {fileID: 7840176458529723190}
   - component: {fileID: 805572756750879547}
+  - component: {fileID: 2580769409805269989}
   m_Layer: 10
   m_Name: DoorWide
   m_TagString: Interactable
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8728070432989969359
@@ -2020,3 +2021,19 @@ MonoBehaviour:
   openSpeed: 2
   closeDelay: 5
   doorBody: {fileID: 8728070432989969359}
+--- !u!208 &2580769409805269989
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7701351738426729365}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 4.6000004, y: 2.8000002, z: 0.25}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 5, y: 3.0000002, z: -0.25}
+  m_TimeToStationary: 0.5
