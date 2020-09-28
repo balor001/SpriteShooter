@@ -48,26 +48,22 @@ using UnityEditor;
 using UnityEditorInternal;
 using System.Linq;
 using UnityEditor.UIElements;
+using System;
 
 [CustomEditor(typeof(SpriteAnimationSheet))]
 public class ListEditor : Editor
 {
     ReorderableList list;
-    ReorderableList spriteList;
     SpriteAnimationSheet spriteAnimationSheet;
 
     SerializedProperty sheetNameProperty;
     SerializedProperty animTypeProperty;
     SerializedProperty animModeProperty;
     SerializedProperty framesPerSecondProperty;
-    SerializedProperty frameArrayProperty;
     SerializedProperty spriteArrayProperty;
 
-    Object test;
-
-
     Sprites GetSprites;
-    Sprite[] spriteArray;
+    Sprite[] savedArray;
     FrameArray GetFrameArrays;
 
 
@@ -76,6 +72,15 @@ public class ListEditor : Editor
     private void OnEnable()
     {
         list = new ReorderableList(serializedObject, serializedObject.FindProperty("frames"), true, true, true, true);
+        
+        spriteAnimationSheet = (SpriteAnimationSheet)target;
+
+
+        //for (int i = 0; i < 8; i++)
+        //{
+        //    spriteAnimationSheet.sprites[i].SpriteArray = new Sprite[8];
+        //}
+
 
 
 
@@ -83,20 +88,19 @@ public class ListEditor : Editor
         animTypeProperty = serializedObject.FindProperty("animType");
         animModeProperty = serializedObject.FindProperty("animMode");
         framesPerSecondProperty = serializedObject.FindProperty("framesPerSecond");
-        frameArrayProperty = serializedObject.FindProperty("frames");
         spriteArrayProperty = serializedObject.FindProperty("sprites");
 
         // test = serializedObject.FindProperty("sprites");
 
         // Get Frame and Sprite Arrays
-        GetSprites = new Sprites();
+
         //spriteArray = GetSprites.spriteArray;
 
         if (target == null)
         {
             return;
         }
-        spriteAnimationSheet = (SpriteAnimationSheet)target;
+
 
 
         // Draw the reordablelist
@@ -121,13 +125,16 @@ public class ListEditor : Editor
         // When frame is selected
         list.onSelectCallback = (ReorderableList l) =>
         {
-            
+
         };
+
+
     }
 
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
+
 
         //base.OnInspectorGUI();
         spriteAnimationSheet = (SpriteAnimationSheet)target;
@@ -137,9 +144,17 @@ public class ListEditor : Editor
         EditorGUILayout.PropertyField(animModeProperty, new GUIContent("Animation Mode"));
         EditorGUILayout.PropertyField(framesPerSecondProperty, new GUIContent("FPS"));
         list.DoLayoutList();
-
-
         //Debug.Log(frameArray[1].sprite);
+
+        //EditorGUILayout.BeginHorizontal();
+        //EditorGUILayout.ObjectField(GetSprites.SpriteObject, typeof(Sprite), true);
+        //EditorGUILayout.EndHorizontal();
+        EditorGUILayout.PropertyField(spriteArrayProperty, new GUIContent("Sprites"));
+
+
+
+        //GetSprites.SpriteArray = new Sprite[list.count];
+
 
         switch (spriteAnimationSheet.animType)
         {
@@ -170,7 +185,6 @@ public class ListEditor : Editor
                 break;
         }
 
-        EditorGUILayout.PropertyField(spriteArrayProperty, new GUIContent("Sprites"));
 
         serializedObject.ApplyModifiedProperties();
     }

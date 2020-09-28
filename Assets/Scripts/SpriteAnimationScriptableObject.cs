@@ -32,18 +32,13 @@ public class SpriteAnimationSheet : ScriptableObject
 
 // Iniatilize List Array
 [Serializable]
-public class FrameArray : SpriteAnimationSheet
+public class FrameArray
 {
 
-
-    public FrameArray(float FramesPerSecond)
-    {
-        framesPerSecond = FramesPerSecond;
-    }
 }
 
 [Serializable]
-public class Sprites : List<FrameArray>
+public class Sprites
 {
-    public Sprite spriteArray;
+    public Sprite[] SpriteArray;
 }
