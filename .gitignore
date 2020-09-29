@@ -12,8 +12,7 @@
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
-!/[Ss]prites/*.meta
-!/[Ss]prites/Props/*.meta
+!/[Aa]ssets/**/*.png
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
