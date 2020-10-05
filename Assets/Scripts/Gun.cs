@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Gun : MonoBehaviour
 {
@@ -8,22 +9,32 @@ public class Gun : MonoBehaviour
     public float range = 100f;
     public float fireRate = 1f;
     public float impactForce = 30f;
+    public int maxAmmo = 50;
+    public static int ammo = 25;
 
     public Animator gunAnimator;
     public Camera fpsCam;
     public PlayerInputController playerInputController;
     public ParticleSystem muzzleFlash;
     public GameObject hitEffect;
+    public Text ammoText;
 
     private float nextTimeToFire = 0f;
 
-    // Update is called once per frame
     void Update()
     {
-        if (playerInputController.inputActions.Player.Fire.triggered && Time.time >= nextTimeToFire)
+        if (ammo > maxAmmo)
+        {
+            ammo = maxAmmo;
+        }
+
+        ammoText.text = string.Format("AMMO: {0:00}/{1:00}", ammo, maxAmmo);
+
+        if (playerInputController.inputActions.Player.Fire.triggered && Time.time >= nextTimeToFire && ammo >= 1)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
+            ammo -= 1;
         }
     }
 
@@ -57,5 +68,10 @@ public class Gun : MonoBehaviour
             GameObject hitEffectGameObject = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(hitEffectGameObject, 2f);
         }
+    }
+
+    public static void AddAmmo(int amount)
+    {
+        ammo += amount;
     }
 }
