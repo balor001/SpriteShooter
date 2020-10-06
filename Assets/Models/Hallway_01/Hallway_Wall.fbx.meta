@@ -1,50 +1,11 @@
 fileFormatVersion: 2
-guid: ac8732793ff24ac4d858fe7bb8d43088
+guid: 7481972ae0a0c2b41ad4d4f59f2de7a2
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable:
-  - first:
-      74: 4196522064084428380
-    second: PipeMedium|BigCubeAction
-  - first:
-      74: 6604684179149510689
-    second: PipeMedium|CubeAction
-  - first:
-      74: -8274806923806416854
-    second: PipeMedium|Hallway_MarkAction
-  - first:
-      74: -3246998113081736278
-    second: PipeMedium|HallwayLampAction
-  - first:
-      74: -413622114648391571
-    second: PipeMedium|HallwayLap2Action
-  - first:
-      74: 5359201577779945082
-    second: PipeMedium|HallwayWall_2Action
-  - first:
-      74: -561457234413793204
-    second: PipeMedium|HallwayWalls.001Action
-  - first:
-      74: -8407748316184004751
-    second: PipeMedium|HallwayWalls.003Action
-  - first:
-      74: -1920666294637644886
-    second: PipeMedium|Hazad_BottleAction
-  - first:
-      74: -5656060161428621586
-    second: PipeMedium|PipeJointSmallAction.001
-  - first:
-      74: 1149388980424679593
-    second: PipeMedium|PipeMediumAction
-  - first:
-      74: 1270565451440587612
-    second: PipeMedium|PipeSmallAction
-  - first:
-      74: 1802768170300558051
-    second: PipeMedium|T_JointAction.001
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
-    materialImportMode: 1
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1

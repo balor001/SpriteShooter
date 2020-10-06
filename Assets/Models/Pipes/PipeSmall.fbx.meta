@@ -2,7 +2,46 @@ fileFormatVersion: 2
 guid: 96854002c4b875a48bb43fbb71ae89ba
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 7759394349442485669
+    second: PipeSmall|BigCubeAction
+  - first:
+      74: 2447441019021170277
+    second: PipeSmall|CubeAction
+  - first:
+      74: 7682902161936190869
+    second: PipeSmall|Hallway_MarkAction
+  - first:
+      74: 1649058822587204943
+    second: PipeSmall|HallwayLampAction
+  - first:
+      74: -2450583403244155938
+    second: PipeSmall|HallwayLap2Action
+  - first:
+      74: -1690094741308046234
+    second: PipeSmall|HallwayWall_2Action
+  - first:
+      74: 405368546305575878
+    second: PipeSmall|HallwayWalls.001Action
+  - first:
+      74: 2676948539310148200
+    second: PipeSmall|HallwayWalls.003Action
+  - first:
+      74: -3691179651969745973
+    second: PipeSmall|Hazad_BottleAction
+  - first:
+      74: 1511716833138884650
+    second: PipeSmall|PipeJointSmallAction.001
+  - first:
+      74: 270691641559607451
+    second: PipeSmall|PipeMediumAction
+  - first:
+      74: -4271794304634510740
+    second: PipeSmall|PipeSmallAction
+  - first:
+      74: 2295147474633288311
+    second: PipeSmall|T_JointAction.001
   externalObjects: {}
   materials:
     materialImportMode: 1
