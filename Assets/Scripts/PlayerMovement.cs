@@ -38,14 +38,26 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        newHeight = originalHeight;
+        GroundCheck();
+        Move();
+        Crouch();
+        Jump();
 
+        //Debug.Log("Speed: " + movementSpeed);
+    }
+
+    void GroundCheck()
+    {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
+    }
 
+    void Move()
+    {
         // Sprinting
         if (isSprinting && isGrounded)
         {
@@ -64,8 +76,13 @@ public class PlayerMovement : MonoBehaviour
 
         playerInput = playerInputController.inputActions.Player.Move.ReadValue<Vector2>();
         controller.Move(transform.right * playerInput.x * movementSpeed * Time.deltaTime + transform.forward * playerInput.y * movementSpeed * Time.deltaTime + gravity * transform.up * Time.deltaTime);
+    }
 
+    void Crouch()
+    {
         // Crouching
+        newHeight = originalHeight;
+
         if (isCrouching)
         {
             newHeight = 0.5f * originalHeight;
@@ -83,18 +100,19 @@ public class PlayerMovement : MonoBehaviour
         }
 
         lastHeight = controller.height;
-        controller.height = Mathf.Lerp(controller.height, newHeight, 10.0f * Time.deltaTime);    // Change character height
+        controller.height = Mathf.Lerp(controller.height, newHeight, 25.0f * Time.deltaTime);    // Change character height
         transform.position = transform.position + new Vector3(0, (controller.height - lastHeight) * 1f, 0);   // Update vertical position
+    }
 
+    void Jump()
+    {
         // Jumping
         if (playerInputController.inputActions.Player.Jump.triggered && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeigth * -2f * gravity);
+            velocity.y = jumpHeigth;
         }
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
-
-        //Debug.Log("Speed: " + movementSpeed);
     }
 }
