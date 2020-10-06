@@ -7,6 +7,12 @@ using UnityEngine;
 public class SpriteAnimation : MonoBehaviour
 {
     public Sprite defaultSprite;
+    public Sprite ForwardSprite;
+    public Sprite LeftSprite;
+    public Sprite RightSprite;
+    public Sprite BackSprite;
+    public Sprite BackSideSprite;
+    public Sprite FrontSideSprite;
 
     public Sprite[] frames;
     public bool loop = false;
@@ -17,9 +23,6 @@ public class SpriteAnimation : MonoBehaviour
     private int currentFrame;
 
     private GameObject player;
-    private Vector2 playerVector;
-
-    
 
     public bool playing = false;
 
@@ -28,10 +31,9 @@ public class SpriteAnimation : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("MainCamera");
 
-
         waitTime = 1 / framesPerSecond; // set wait to match fps
-        Play();
-        Orientation();
+        //Play();
+        //Orientation();
     }
 
     public void Play()
@@ -64,20 +66,84 @@ public class SpriteAnimation : MonoBehaviour
             playing = false;
     }
 
+    public void Update()
+    {
+        Orientation();
+    }
+
     private void Orientation()
     {
-        Vector2 direction = new Vector2(transform.forward.x, transform.forward.z);
+        Vector3 targetDirection = player.transform.position - transform.parent.position;
+        Vector3 forward = transform.parent.forward;
 
-        playerVector = new Vector2(player.transform.position.x, player.transform.position.z);
 
-        float deltaAngle = Vector2.Angle(direction, playerVector);
+        float deltaAngle = Vector3.SignedAngle(targetDirection, forward, Vector3.up);
+
+
         Debug.Log("Angle: " + deltaAngle);
 
-        if (deltaAngle < 45f)
+        transform.LookAt(targetDirection);
+        transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
+
+
+        if (deltaAngle >= -22.5f && deltaAngle <= 22.5f)
         {
-            Debug.Log("Forward");
+            spriteRenderer.sprite = ForwardSprite;
+            spriteRenderer.flipX = false;
+            //transform.rotation = Quaternion.AngleAxis(0f, Vector3.up);
+            Debug.Log("North!");
         }
 
-       
+        else if (deltaAngle > 22.5f && deltaAngle < 67.5f)
+        {
+            spriteRenderer.sprite = FrontSideSprite;
+            spriteRenderer.flipX = true;
+            //transform.rotation = Quaternion.AngleAxis(-45f, Vector3.up);
+            Debug.Log("North-East!");
+        }
+        else if (deltaAngle >= 67.5f && deltaAngle <= 112.5f)
+        {
+            spriteRenderer.sprite = LeftSprite;
+            spriteRenderer.flipX = true;
+            //transform.rotation = Quaternion.AngleAxis(90f, Vector3.up);
+            Debug.Log("East!");
+        }
+        else if (deltaAngle > 112.5f && deltaAngle < 157.5f)
+        {
+            spriteRenderer.sprite = BackSideSprite;
+            spriteRenderer.flipX = true;
+            //transform.rotation = Quaternion.AngleAxis(45f, Vector3.up);
+            Debug.Log("South-East!");
+        }
+
+        else if (deltaAngle < -22.5f && deltaAngle > -67.5f)
+        {
+            spriteRenderer.sprite = FrontSideSprite;
+            spriteRenderer.flipX = false;
+            //transform.rotation = Quaternion.AngleAxis(45f, Vector3.up);
+            Debug.Log("North-West!");
+        }
+        else if (deltaAngle <= -67.5f && deltaAngle >= -112.5f)
+        {
+            spriteRenderer.sprite = RightSprite;
+            spriteRenderer.flipX = false;
+            //transform.rotation = Quaternion.AngleAxis(90f, Vector3.up);
+            Debug.Log("West!");
+        }
+        else if (deltaAngle < -112.5f && deltaAngle > -157.5f)
+        {
+            spriteRenderer.sprite = BackSideSprite;
+            spriteRenderer.flipX = false;
+            //transform.rotation = Quaternion.AngleAxis(-45f, Vector3.up);
+            Debug.Log("South-West!");
+        }
+
+        else if (deltaAngle >= 157.5f || deltaAngle <= -157.5f)
+        {
+            spriteRenderer.sprite = BackSprite;
+            spriteRenderer.flipX = false;
+            //transform.rotation = Quaternion.AngleAxis(0, Vector3.up);
+            Debug.Log("South!");
+        }
     }
 }
